@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="icon" type="image/x-icon" href="./snake_JpL_icon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+    <h1>Leaderboard</h1>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% var rank=1; %>
+                <% leaderboard.forEach((row)=> { %>
+                    <tr>
+                        <td class="active-row">
+                            <%= rank++; %>
+                        </td>
+                        <td>
+                            <%= row.name %>
+                        </td>
+                        <td>
+                            <%= row.score %>
+                        </td>
+                    </tr>
+                    <% }); %>
+        </tbody>
+    </table>
+    
+    <button id="home" onclick="restart()"><span class="options"></span> Home Page </button>
+    <script>
+        function restart() {
+            location.replace("https://jacosta.cs3680.com/snakeGame")
+        }
+    </script>
+
+</body>
+
+</html>

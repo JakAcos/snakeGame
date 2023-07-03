@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <title>Retro Snake</title>
+    <link rel="icon" type="image/x-icon" href="./snakeGame/snake_JpL_icon.ico">
+    <link rel="stylesheet" href="/snakeGame/snake.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body id="game">
+    <h1> Play Retro Snake </h1>
+    <h4> We are aware of an issue with the snake disapearing suddenly and are working to fix this! Thank you for your
+        patience!</h4>
+    <br></br>
+
+    <form action="/snakeGame/game" method="POST">
+        <input required id="username" type="text" name="user" maxlength="3" style="text-transform: uppercase" />
+        <button type="submit"><span class="options"></span> Play Game </button>
+        <button onclick="setHalfVolume()" type="button"><span class="options"></span>Lower Music Volume</button>
+        <button id="leaderboard" onclick="viewLeaderboard()"><span class="options"></span> View Leaderboard </button>
+    </form>
+
+    <audio id="menumusic" loop autoplay =""  src="./snakeGame/8-bit-wii-sports.mp3" ></audio>
+
+</body>
+
+<script>
+    var music = document.getElementById("menumusic");
+    function setHalfVolume() {
+        music.volume = 0.08;
+    }
+</script>
+
+<script>
+    function viewLeaderboard() {
+        fetch('/leaderboard', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ score: "sent successful" })
+        }).then(function (response) {
+            window.location.href = "./snakeGame/leaderboard.ejs";
+        }).catch(function (error) {
+            console.error(error);
+        });
+    }
+</script>
+
+</html>

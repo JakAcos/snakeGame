@@ -1,0 +1,76 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background-color: #292925;
+    background-image: url("./forest.large.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: 100;
+}
+
+#game {
+   position: fixed;
+    top: 200px;
+    right:12%;
+    align-items:center;
+    text-align:center;
+    font-size: 28px;
+    font-weight: 100;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+h4{
+    font-size: 13px;
+    font-weight: 100;
+    color: antiquewhite;
+    margin-top: 5%;
+}
+
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 45%;
+    font-weight: bold;
+    border: 2px solid white;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+    border-radius: 8px;
+
+}
+
+.options {
+    background: rgb(12, 153, 12);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+button:hover .options {
+    width: 100%;
+}
+
+#username {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 7px;
+    border: 2px solid white;
+}

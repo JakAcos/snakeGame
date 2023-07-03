@@ -1,0 +1,95 @@
+* {
+	font-family: 'Press Start 2P';
+}
+body{
+	text-align: center;
+	margin-top: 8%;
+	font-size: 20px;
+	background-color: rgb(19, 89, 155);
+}
+
+table{
+	background-color: white;
+}
+
+h1{
+    color: orange;
+}
+.content-table {
+	border-collapse: collapse;
+    margin: auto;
+    font-size: 0.9em;
+    min-width: 600px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #292925;
+    color: greenyellow;
+	text-align: center;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+	
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid black;
+}
+
+.content-table tbody tr:nth-of-type(1) {
+    background-color: gold;
+}
+
+.content-table tbody tr:nth-of-type(2) {
+    background-color: silver;
+}
+
+.content-table tbody tr:nth-of-type(3) {
+    background-color:#CD7F32 ;
+}
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid black;
+}
+
+.content-table tbody td.active-row {
+    font-weight: bold;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid white;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+    border-radius: 8px;
+    margin-top: 2%;
+
+}
+.options {
+    background: rgb(12, 153, 12);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover .options {
+    width: 100%;
+}

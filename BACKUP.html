@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <meta charset="utf-8">
+        <title>Retro Snake Game</title>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/snakeGame/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <script src="./jquery-3.6.4.js"></script>
+</head>
+
+<body>
+
+<h1>Retro Snake Game</h1>
+<p> Score: <span id = "actual-score"> 0 </span></p>
+<form>
+        
+</form>
+
+<canvas id="myCanvas" width="250" height="250"></canvas>
+<p id="msg"> Press Space to start </p>
+
+<button onclick="setHalfVolume()" type="button"><span class="options"></span>Lower Music Volume</button>
+<audio id="bgmusic" loop autoplay="" src="./Music/8-bit-brawl.mp3"></audio>
+<form action="/snakeGame/">
+        <button id="Restart" ><span class="options"></span> Try Again </button>
+
+</form>
+
+
+
+</body>
+<script src="/snakeGame/main.js"></script>
+<script>
+        var music = document.getElementById("bgmusic");
+        function setHalfVolume() {
+                music.volume = 0.08;
+        }
+        function restart() {
+                location.replace("./home.html")
+        }
+</script>
+
+</html>
